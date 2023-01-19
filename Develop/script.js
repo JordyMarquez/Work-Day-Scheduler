@@ -2,6 +2,10 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var dateEl = $('#currentDay');
+var boxEl = $('<hour>');
+var now = dayjs().format('h');
+var taskTime = $(this).data("hour")
+
 displayDate();
 setTimeColor();
 
@@ -33,9 +37,7 @@ saveBtnEl.on('click', function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
-  var boxEl = $('<hour>');
-  var now = dayjs().format('h');
-  var taskTime = $(this).data("hour")
+
   function setTimeColor()
   {
     if (taskTime.isAfter(now)) {
