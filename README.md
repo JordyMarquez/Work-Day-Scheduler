@@ -12,6 +12,6 @@ The following animation demonstrates the application functionality:
 ./Assets/05-third-party-apis-homework-demo.gif
 
 ## Link
-To check out the code, right click anywhere on the page and click inspect. Here's the link to the site: 
+To check out the code, right click anywhere on the page and click inspect. Here's the link to the site: https://jordymarquez.github.io/Work-Day-Scheduler/
 
 
