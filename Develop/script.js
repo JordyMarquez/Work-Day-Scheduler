@@ -3,6 +3,7 @@
 // in the html.
 var dateEl = $('#currentDay');
 displayDate();
+setTimeColor();
 
 $(function () { });
 //I'm confused about this function up here. Is it supposed to wrap the rest of my code?
@@ -14,10 +15,17 @@ $(function () { });
 // time-block containing the button that was clicked? How might the id be
 // useful when saving the description in local storage?
 //
-var saveBtnEl = $('saveBtn');
-saveBtnEl.on('click', function ()) {
-  localStorage.setItem()
-  $("body).children("div.hour")}
+var saveBtnEl = $('.saveBtn');
+saveBtnEl.on('click', function () {
+
+
+  var valHour = $(this).data("hour"); //picks the hour when button is clicked
+  var userInput = $("#hour-" + valHour).children("textarea").val().trim()
+  console.log(valHour, userInput)
+  
+  localStorage.setItem(valHour, userInput)
+
+})
 
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -27,7 +35,7 @@ saveBtnEl.on('click', function ()) {
 
   var boxEl = $('<hour>');
   var now = dayjs().format('h');
-
+  var taskTime = $(this).data("hour")
   function setTimeColor()
   {
     if (taskTime.isAfter(now)) {
@@ -47,7 +55,7 @@ saveBtnEl.on('click', function ()) {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
-  //localStorage.getItem()
+  localStorage.getItem(valHour, userInput)
 
   // TODO: Add code to display the current date in the header of the page 
   function displayDate() {
